@@ -1,0 +1,303 @@
+* {
+    margin: 0;              /* รีเซ็ต margin ของทุก element = 0 */
+    padding: 0;             /* รีเซ็ต padding ของทุก element = 0 */
+    box-sizing: border-box; /* คำนวณความกว้าง/สูงโดยรวม border + padding เข้ามาด้วย */
+}
+
+body { 
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; /* กำหนดฟอนต์หลัก */
+    line-height: 1.6;       /* กำหนดระยะห่างระหว่างบรรทัด */
+    color: #1a1a1a;         /* สีตัวอักษรเริ่มต้น */
+    background-color: rgb(0, 0, 0); /* สีพื้นหลังดำ */
+    min-height: 100vh;      /* ความสูงอย่างน้อยเท่ากับความสูงหน้าจอ */
+}
+
+img { 
+    max-width: 100%;        /* รูปภาพไม่เกินขอบ container */
+    display: block;         /* แสดงเป็น block element */
+}
+
+h1, h2, h3 { 
+    line-height: 1.2;       /* กำหนดระยะห่างบรรทัดของหัวข้อให้แน่นขึ้น */
+}
+
+.container {
+    max-width: 1200px;      /* จำกัดความกว้างสูงสุด */
+    margin: 0 auto;         /* จัดกึ่งกลางแนวนอน */
+    padding: 0 24px;        /* เว้น padding ด้านซ้าย/ขวา */
+}
+
+header {
+    position: sticky;       /* ติดอยู่ด้านบนเมื่อเลื่อนหน้า */
+    background-color: white;/* พื้นหลังสีขาว */
+    top: 0;                 /* ชิดด้านบน */
+    z-index: 1000;          /* ซ้อนทับ element อื่น */
+}
+
+.nav { 
+    height: 70px;           /* ความสูงของแถบเมนู */
+    display: flex;          /* ใช้ flex จัด layout */
+    align-items: center;    /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    justify-content: space-between; /* กระจาย space ระหว่างซ้าย-ขวา */
+}
+
+.nickname { 
+    font-weight: 800;       /* น้ำหนักฟอนต์หนามาก */
+    font-size: 24px;        /* ขนาดฟอนต์ */
+    color: #000000;         /* สีตัวอักษรดำ */
+}
+
+.menu { 
+    display: flex;          /* เมนูแสดงเป็นแถว */
+    gap: 8px;               /* เว้นระยะห่างระหว่างลิงก์ */
+}
+
+.menu a { 
+    color: #000000;         /* สีข้อความดำ */
+    text-decoration: none;  /* ตัดเส้นใต้ลิงก์ */
+    padding: 12px 20px;     /* ระยะห่างรอบข้อความ */
+    font-weight: 700;       /* ตัวหนา */
+}
+
+.menu a:hover { 
+    background-color: #bababa; /* เปลี่ยนพื้นหลังเมื่อ hover */
+    border-radius: 4px;        /* มุมโค้ง */
+}
+
+.burger { 
+    display: none;          /* ซ่อนปุ่ม burger บน desktop */
+    background: none;       /* ไม่มีพื้นหลัง */
+    border: 0;              /* ไม่มีเส้นขอบ */
+    color: #000000;         /* สีดำ */
+    font-size: 24px;        /* ขนาดตัวอักษรใหญ่ (ไอคอน ☰) */
+    cursor: pointer;        /* เปลี่ยนเมาส์เป็นรูป pointer */
+    padding: 8px;           /* เว้นรอบปุ่ม */
+    border-radius: 8px;     /* มุมโค้ง */
+}
+
+@media (max-width: 768px) {
+    .menu { 
+        display: none;      /* ซ่อนเมนูหลักบนมือถือ */
+        position: absolute; /* แสดงแบบลอย */
+        top: 100%;          /* อยู่ใต้ header */
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95); /* พื้นหลังโปร่งขาว */
+        backdrop-filter: blur(10px);            /* เบลอพื้นหลัง */
+        flex-direction: column;                 /* เรียงเป็นคอลัมน์ */
+        padding: 20px;                          /* ระยะห่างภายใน */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* เงาด้านล่าง */
+    }
+    .menu.open { display: flex; } /* เมื่อกด burger ให้เปิดเมนู */
+    .burger { display: block; }   /* แสดงปุ่ม burger */
+}
+
+main {
+    padding: 40px 0;        /* ระยะห่างด้านบน/ล่างของเนื้อหา */
+}
+
+.head {
+    display: grid; 
+    gap: 60px;              /* ระยะห่างระหว่างคอลัมน์ */
+    align-items: center;    /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    grid-template-columns: 1.3fr 1fr; /* สร้าง 2 คอลัมน์: ซ้ายกว้างกว่าขวา */
+    min-height: 500px;      /* ความสูงอย่างน้อย 500px */
+}
+    
+.head-content {
+    padding: 40px 0;        /* ระยะห่างด้านบน/ล่าง */
+}
+    
+.head-badge {
+    display: inline-block;  /* ให้ span แสดงเหมือน block แต่เรียงกับข้อความได้ */
+    background-color: black;/* พื้นหลังดำ */
+    color: white;           /* ตัวอักษรขาว */
+    padding: 8px 20px;      /* ระยะห่างใน */
+    border-radius: 25px;    /* มุมโค้งรี */
+    font-size: 14px;        /* ขนาดฟอนต์เล็ก */
+    font-weight: 600;       /* หนากลาง ๆ */
+    margin-bottom: 20px;    /* เว้นด้านล่าง */
+}
+    
+.title { 
+    font-size: clamp(32px, 6vw, 56px); /* ขนาดฟอนต์ responsive 32–56px */
+    font-weight: 800;       /* หนามาก */
+    margin: 0 0 24px 0;     /* เว้นด้านล่าง */
+}
+    
+.lead { 
+    color: #4a5568;         /* สีเทาเข้ม */
+    font-size: 18px;        /* ขนาดฟอนต์ปานกลาง */
+    margin-bottom: 32px;    /* เว้นด้านล่าง */
+}
+    
+.head-photo {
+    width: 320px;           /* ความกว้างรูป */
+    height: 320px;          /* ความสูงรูป */
+    border-radius: 30px;    /* มุมโค้ง */
+    object-fit: cover;      /* ตัดภาพให้เต็มกรอบ */
+    border: 6px solid white;/* กรอบสีขาว */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); /* เงา */
+    justify-self: center;   /* จัดรูปให้อยู่กลางคอลัมน์ */
+}
+
+@media (max-width: 900px) { 
+    .head { 
+        grid-template-columns: 1fr; /* ลดเหลือคอลัมน์เดียว */
+        text-align: center;         /* จัดข้อความกึ่งกลาง */
+        gap: 40px;                  /* ลดช่องว่าง */
+    }
+    .head-photo {
+        width: 260px;  /* ย่อรูปลง */
+        height: 260px;
+    }
+}
+
+.card {
+    background: rgb(255, 255, 255); /* พื้นหลังขาว */
+    border-radius: 24px;            /* มุมโค้ง */
+    padding: 40px;                  /* ระยะห่างภายใน */
+    margin-top: 20px;               /* เว้นด้านบน */
+    margin-bottom: 10px;            /* เว้นด้านล่าง */
+}
+
+.section-header {
+    margin-bottom: 32px; /* เว้นด้านล่างหัวข้อ section */
+}
+
+.section-title {
+    font-size: 32px;      /* ขนาดตัวอักษรใหญ่ */
+    font-weight: 700;     /* หนา */
+    margin-bottom: 8px;   /* เว้นด้านล่าง */
+    color: #1a1a1a;       /* สีดำ */
+}
+
+.skills-list {
+    display: flex;        /* แสดงทักษะเป็นแถว */
+    flex-wrap: wrap;      /* ตัดบรรทัดถ้าเกิน */
+    gap: 12px;            /* ช่องว่างระหว่าง skill */
+    margin-top: 24px;     /* เว้นด้านบน */
+}
+
+.skill {
+    background: rgb(0, 0, 0); /* พื้นหลังดำ */
+    color: white;             /* ตัวอักษรขาว */
+    padding: 10px 20px;       /* ระยะห่างใน */
+    border-radius: 20px;      /* มุมโค้งรี */
+    font-weight: 600;         /* ตัวหนากลาง ๆ */
+    font-size: 14px;          /* ขนาดฟอนต์เล็ก */
+    transition: transform 0.3s ease; /* เอฟเฟกต์ transition */
+}
+
+.skill:hover {
+    transform: translateY(-2px); /* ยกขึ้นเล็กน้อยเมื่อ hover */
+}
+
+.grid {
+    display: grid; 
+    gap: 30px;                   /* ช่องว่าง grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    /* สร้าง grid ที่ยืดหยุ่นอัตโนมัติ */
+}
+
+.grid .card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: #cbcbcb 1px solid;   /* เส้นขอบเทาอ่อน */
+}
+
+.project {
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px); /* การ์ดยกขึ้นเมื่อ hover */
+}
+
+.project img { 
+    border-radius: 16px;  /* มุมโค้ง */
+    margin-bottom: 20px;  /* เว้นด้านล่าง */
+    transition: transform 0.3s ease;
+}
+
+.project h3 { 
+    margin: 0 0 12px 0;   /* เว้นด้านล่าง */
+    font-size: 20px;      /* ขนาดฟอนต์ */
+    font-weight: 600;     /* หนา */
+    color: #1a1a1a;       /* สีดำ */
+}
+
+.project p {
+    color: #6b7280;       /* สีเทา */
+}
+
+.links { 
+    display: flex; 
+    gap: 16px;            /* ช่องว่างระหว่างลิงก์ */
+    flex-wrap: wrap;      /* ถ้าเกินบรรทัดให้ขึ้นบรรทัดใหม่ */
+    margin-top: 24px; 
+}
+    
+.link {
+    background: #1a1a1a;  /* พื้นหลังดำ */
+    color: white;         /* ตัวอักษรขาว */
+    text-decoration: none;/* ไม่มีเส้นใต้ */
+    padding: 16px 24px;   /* ระยะห่าง */
+    border-radius: 16px;  /* มุมโค้ง */
+    display: inline-flex; /* จัดให้อยู่ในบรรทัดเดียวและใช้ flex */
+    align-items: center;  /* จัดข้อความ/ไอคอนกึ่งกลางแนวตั้ง */
+    gap: 12px;            /* ระยะห่างไอคอนกับข้อความ */
+    font-weight: 500;     /* หนากลาง ๆ */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* เงา */
+}
+    
+.link:hover { 
+    transform: translateY(-3px); /* ยกขึ้น */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+    
+.icon { 
+    width: 20px;
+    height: 20px;
+}
+
+footer { 
+    padding: 60px 0 40px; /* ระยะห่างบน-ล่าง */
+    text-align: center;   /* จัดกึ่งกลาง */
+    color: rgba(255, 255, 255, 0.7); /* สีเทาโปร่ง */
+    font-size: 14px;      /* ฟอนต์เล็ก */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;   /* ลด padding ในมือถือ */
+    }
+
+    .card {
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+
+    .section-title {
+        font-size: 28px;   /* ขนาดหัวข้อเล็กลง */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* ให้ grid เหลือคอลัมน์เดียว */
+    }
+
+    main {
+        padding: 20px 0;   /* ลดระยะห่าง */
+    }
+}
+
+/* ทำให้การ scroll ลื่นไหล */
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* เผื่อพื้นที่ด้านบนเวลา scroll ไป section */
+}

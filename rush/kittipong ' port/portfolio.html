@@ -1,0 +1,120 @@
+<!DOCTYPE html> <!-- กำหนดว่าเอกสารนี้เป็น HTML5 -->
+<html lang="en"> <!-- ระบุภาษาหลักของเว็บเป็นภาษาอังกฤษ -->
+<head>
+    <meta charset="UTF-8"> <!-- กำหนดการเข้ารหัสตัวอักษร UTF-8 รองรับภาษาไทย/อังกฤษ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ทำให้เว็บแสดงผล Responsive บนอุปกรณ์ต่างๆ -->
+    <title>Kittipong's Portfolio</title> <!-- ชื่อที่จะแสดงบนแท็บของเบราว์เซอร์ -->
+    <link rel="stylesheet" href="portfolio.css"> <!-- เชื่อมต่อไฟล์ CSS หลัก -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" /> <!-- ใช้ Font Awesome สำหรับไอคอน -->
+</head>
+<body>
+    <!-- ส่วน Header (เมนูนำทางด้านบน) -->
+    <header>
+        <div class="container nav"> <!-- กล่องครอบ Header + ใช้ flex จัด layout -->
+            <div class="nickname">Kittipong</div> <!-- ชื่อเล่นด้านบนซ้าย -->
+            <nav class="menu" id="menu"> <!-- เมนูนำทาง -->
+                <a href="/rush/runh.html">Home</a> <!-- ลิงก์ไปหน้า Home -->
+                <a href="#about">About</a> <!-- เลื่อนลงไปส่วน About -->
+                <a href="#showcase">Showcase</a> <!-- เลื่อนลงไปส่วน Showcase -->
+                <a href="#contact">Contact</a> <!-- เลื่อนลงไปส่วน Contact -->
+            </nav>
+            <button class="burger" id="burger">☰</button> <!-- ปุ่ม Burger สำหรับมือถือ -->
+        </div>
+    </header>
+
+    <!-- เนื้อหาหลัก -->
+    <main class="container">
+
+        <!-- Section: Home -->
+        <section id="home">
+            <div class="card"> <!-- กล่อง Card สำหรับจัดเนื้อหา -->
+                <div class="head"> <!-- ส่วนหัว (Hero) -->
+                    <div class="head-content"> <!-- เนื้อหาด้านซ้าย -->
+                        <span class="head-badge">Portfolio</span> <!-- Badge ข้อความ -->
+                        <h1 class="title">Kittipong Meeanan</h1> <!-- ชื่อเต็ม -->
+                        <p class="lead"> <!-- ข้อความแนะนำตัว -->
+                            HI! You can call me <strong>Tar</strong> I'm Computer Science student at <strong>KMITL</strong>. 
+                            <br>I enjoy problem-solving and building clean, simple projects in Java.
+                        </p>
+                    </div>
+                    <img class="head-photo" src="/rush/css/img/Tar.jpeg" alt=""> <!-- รูปภาพโปรไฟล์ -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: About -->
+        <section id="about">
+            <div class="card"> <!-- กล่อง About -->
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2> <!-- หัวข้อ -->
+                    <p class="section-subtitle"> <!-- รายละเอียดส่วนตัว -->
+                        Name: Kittipong Meeanan
+                        <br>Student ID: 68050031
+                        <br>Nickname: Tar
+                        <br>Age: 19 years old
+                        <br>Birthdate: 14 June 2006
+                        <br>I'm a first-year Computer Science student at KMITL
+                        <br>I'm a Computer Science student who loves algorithms and math puzzles.
+                    </p>
+                </div>
+                <!-- Skills -->
+                <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1a1a1a;">Skills & Technologies</h3>
+                <div class="skills-list">
+                    <span class="skill">Python 20%</span>
+                    <span class="skill">Java 20%</span>
+                    <span class="skill">HTML 50%</span>
+                    <span class="skill">CSS 40%</span>
+                    <span class="skill">JavaScript 20%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Showcase -->
+        <section id="showcase">
+            <div class="card"> <!-- กล่อง Showcase -->
+                <div class="section-header">
+                    <h2 class="section-title">Experience & Certificates</h2> <!-- หัวข้อ -->
+                    <p class="section-subtitle">My Certificates and projects.</p> <!-- คำอธิบาย -->
+                </div>
+                <div class="grid"> <!-- ใช้ Grid แบ่ง project -->
+                    <article class="card project"> <!-- โปรเจกต์ 1 -->
+                        <img src="/rush/css/img/project42web.png" alt=""> <!-- รูปโปรเจกต์ -->
+                        <h3>Rush Project 42 Bangkok</h3> <!-- ชื่อโปรเจกต์ -->
+                        <p>This is the final project of 42 Bangkok.</p> <!-- คำอธิบายโปรเจกต์ -->
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Contact -->
+        <section id="contact">
+            <div class="card"> <!-- กล่อง Contact -->
+                <div class="section-header">
+                    <h2 class="section-title">My Contacts</h2> <!-- หัวข้อ -->
+                </div>
+                <div class="links"> <!-- ลิงก์ติดต่อ -->
+                    <a class="link" href="https://github.com/tarwws" target="_blank" rel="">
+                        <span class="icon"><i class="fa-brands fa-github"></i></span> GitHub
+                    </a>
+                    <a class="link" href="https://www.facebook.com/kittipong.meeanan" target="_blank" rel="" style="background:#1877f2;">
+                        <span class="icon"><i class="fab fa-facebook-f"></i></span> Facebook
+                    </a>
+                    <a class="link" href="https://www.instagram.com/kittipong_meeanan/" target="_blank" rel="" style="background:#e1306c;">
+                        <span class="icon"><i class="fab fa-instagram"></i></span> Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ส่วน Footer -->
+    <footer>
+        <div class="container">
+            © 2025 Kittipong <!-- ข้อความลิขสิทธิ์ -->
+        </div>
+    </footer>
+
+    <!-- เรียกใช้ไฟล์ JavaScript สำหรับเมนู Burger -->
+    <script src="portfolio.js"></script>
+</body>
+</html>
