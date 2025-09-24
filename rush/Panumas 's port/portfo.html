@@ -1,112 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panumas's Portfolio</title>
-    <link rel="stylesheet" href="portfo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-</head>
-<body>
-    <header>
-        <div class="container nav">
-        <div class="nickname">Panumas</div>
-        <nav class="menu" id="menu">
-            <a href="/rush/runh.html">Home</a>
-            <a href="#about">About</a>
-            <a href="#showcase">Showcase</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <button class="burger" id="burger">☰</button>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panumas's Portfolio</title>
+        <link rel="stylesheet" href="portfo.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <main class="container">
-    <section id="home">
-        <div class="card">
-            <div class="head">
-                <div class="head-content">
-                    <span class="head-badge">Portfolio</span>
-                    <h1 class="title">Panumas Suthiboon </h1>
-                    <p class="lead">
-                        HI! You can call me <strong>Tar</strong> I'm Computer Science student at <strong>KMITL</strong>. 
-                        <br>I enjoy problem-solving and building clean, simple projects in Java.
-                    </p>
+    </head>
+    <audio id="bg-music" autoplay loop>
+        <source src="/tvoff.mp3" type="audio/mpeg">
+    </audio>
+
+    <body>
+        <header>
+            <nav class="menu" id="menu">
+                <button id="music-toggle" class="music-btn">
+                    <i class="fas fa-music"></i> Music On
+                </button>
+
+                <a href="/rush/runh.html">Home</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">About <i
+                            class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#about-tar">About Tar</a>
+                        <a href="#about-tahn">About Tahn</a>
+                    </div>
                 </div>
-                <img class="head-photo" src="/rush/css/img/Tar.jpeg" alt="">
-            </div>
-        </div>
-    </section>
 
-    <section id="about">
-        <div class="card">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">
-                    Name: Kittipong Meeanan
-                    <br>Student ID: 68050031
-                    <br>Nickname: Tar
-                    <br>Age: 19 years old
-                    <br>Birthdate: 14 June 2006
-                    <br>I'm a first-year Computer Science student at KMITL
-                    <br>I'm a Computer Science student who loves algorithms and math puzzles.
-                </p>
-            </div>
-            <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1a1a1a;">Skills & Technologies</h3>
-            <div class="skills-list">
-                <span class="skill">Python 20%</span>
-                <span class="skill">Java 20%</span>
-                <span class="skill">HTML 50%</span>
-                <span class="skill">CSS 40%</span>
-                <span class="skill">JavaScript 20%</span>
-            </div>
-        </div>
-    </section>
+                <a href="#showcase">Showcase</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-    <section id="showcase">
-        <div class="card">
-            <div class="section-header">
-                <h2 class="section-title">Experience & Certificates</h2>
-                <p class="section-subtitle">My Certificates and projects.</p>
-            </div>
-            <div class="grid">
-                <article class="card project">
-                    <img src="/rush/css/img/project42web.png" alt="">
-                    <h3>Rush Project 42 Bangkok</h3>
-                    <p>
-                        This is the final project of 42 Bangkok.
-                    </p>
-                </article>
-                
-            </div>
-        </div>
-    </section>
+        </header>
 
-        <section id="contact">
-            <div class="card">
-                <div class="section-header">
-                    <h2 class="section-title">My Contacts</h2>
+        <main class="container">
+            <section id="home">
+                <div class="card">
+                    <div class="head">
+                        <div class="head-content">
+                            <span class="head-badge">Portfolio</span>
+                            <h1 class="title">Kittipong Meeanan </h1>
+                            <p class="lead">
+                                HI! You can call me <strong>Tar</strong> I'm
+                                Computer Science student at
+                                <strong>KMITL</strong>.
+                                <br>I enjoy problem-solving and building clean,
+                                simple projects in Java.
+                            </p>
+                        </div>
+                        <img class="head-photo" src="/rush/css/img/Tar.jpeg"
+                            alt>
+                    </div>
                 </div>
-                <div class="links">
-                    <a class="link" href="https://github.com/tarwws" target="_blank" rel="">
-                        <span class="icon"><i class="fa-brands fa-github"></i></span> GitHub
-                    </a>
-                    <a class="link" href="https://www.facebook.com/kittipong.meeanan" target="_blank" rel="" style="background:#1877f2;">
-                        <span class="icon"><i class="fab fa-facebook-f"></i></span> Facebook
-                    </a>
-                    <a class="link" href="https://www.instagram.com/kittipong_meeanan/" target="_blank" rel="" style="background:#e1306c;">
-                        <span class="icon"><i class="fab fa-instagram"></i></span> Instagram
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <footer>
-        <div class="container">
-        © 2025 Panumas
-        </div>
-    </footer>
-    <script src="portfo.js"></script>
-</body>
+            <section id="about-tar">
+                <div class="card">
+                    <div class="section-header">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="section-subtitle">
+                            Name: Kittipong Meeanan
+                            <br>Student ID: 68050031
+                            <br>Nickname: Tar
+                            <br>Age: 19 years old
+                            <br>Birthdate: 14 June 2006
+                            <br>I'm a first-year Computer Science student at
+                            KMITL
+                            <br>I'm a Computer Science student who loves
+                            algorithms and math puzzles.
+                        </p>
+                    </div>
+                    <h3
+                        style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1a1a1a;">Skills
+                        & Technologies</h3>
+                    <div class="skills-list">
+                        <span class="skill">Python 20%</span>
+                        <span class="skill">Java 20%</span>
+                        <span class="skill">HTML 50%</span>
+                        <span class="skill">CSS 40%</span>
+                        <span class="skill">JavaScript 20%</span>
+                    </div>
+                </div>
+            </section>
+            <!-- ------------------------------------------------------------------- -->
+            <section id="home">
+                <div class="card">
+                    <div class="head">
+                        <div class="head-content">
+                            <span class="head-badge">Portfolio</span>
+                            <h1 class="title">Panumas Suthiboon </h1>
+                            <p class="lead">
+                                HI! You can call me <strong>Tahn</strong> I'm
+                                Computer Science student at
+                                <strong>KMITL</strong>.
+                                <br>I love to find the coding problem and
+                                solving it as quick as my brain still working.
+                                <br>And my truly loving is How
+                                <strong>CS</strong> was teached me to walk by my
+                                own leg.
+                            </p>
+                        </div>
+                        <img class="head-photo" src="/TahnPhoto.jpg"
+                            alt>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about-tahn">
+                <div class="card">
+                    <div class="section-header">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="section-subtitle">
+                            Name: Panumas Suthiboon
+                            <br>Student ID: 68050423
+                            <br>Nickname: Tahn
+                            <br>Age: 19 years old
+                            <br>Birthdate: 26 January 2006
+                            <br>I'm a first-year Computer Science student at
+                            KMITL
+                            <br>I love to learn the thing I haven't seen
+                            before!!
+                        </p>
+                    </div>
+                    <h3
+                        style="font-size: 24px; font-weight: 600; margin-bottom: 16px; color: #1a1a1a;">Skills
+                        & Technologies</h3>
+                    <div class="skills-list">
+                        <span class="skill">Python 25%</span>
+                        <span class="skill">Java 45%</span>
+                        <span class="skill">HTML 30%</span>
+                        <span class="skill">CSS 30%</span>
+                        <span class="skill">JavaScript 35%</span>
+                    </div>
+                </div>
+            </section>
+            <!-- ------------------------------------------------------------------- -->
+            <section id="showcase">
+                <div class="card">
+                    <div class="section-header">
+                        <h2 class="section-title">Experience & Certificates</h2>
+                        <p class="section-subtitle">My Certificates and
+                            projects.</p>
+                    </div>
+                    <div class="grid">
+                        <article class="card project">
+                            <img src="/rush/css/img/project42web.png" alt>
+                            <h3>Rush Project 42 Bangkok</h3>
+                            <p>
+                                This is the final project of 42 Bangkok.
+                            </p>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="card">
+                    <div class="section-header">
+                        <h2 class="section-title">My Contacts</h2>
+                    </div>
+                    <div class="links">
+                        <a class="link" href="https://github.com/tarwws"
+                            target="_blank" rel>
+                            <span class="icon"><i
+                                    class="fa-brands fa-github"></i></span>
+                            GitHub
+                        </a>
+                        <a class="link"
+                            href="https://www.facebook.com/kittipong.meeanan"
+                            target="_blank" rel style="background:#1877f2;">
+                            <span class="icon"><i
+                                    class="fab fa-facebook-f"></i></span>
+                            Facebook
+                        </a>
+                        <a class="link"
+                            href="https://www.instagram.com/kittipong_meeanan/"
+                            target="_blank" rel style="background:#e1306c;">
+                            <span class="icon"><i
+                                    class="fab fa-instagram"></i></span>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- --------------------------------------------------- -->
+            <section id="contact">
+                <div class="card">
+                    <div class="section-header">
+                        <h2 class="section-title">My Contacts</h2>
+                    </div>
+                    <div class="links">
+                        <a class="link" href="https://github.com/PanumasS"
+                            target="_blank" rel>
+                            <span class="icon"><i
+                                    class="fa-brands fa-github"></i></span>
+                            GitHub
+                        </a>
+                        <a class="link colorgradient"
+                            href="https://mail.google.com/mail/u/1/#inbox"
+                            target="_blank" rel="noopener noreferrer">
+                            <span class="icon"><i
+                                    class="fas fa-envelope"></i></span>
+                            Email
+                        </a>
+                        <a class="link"
+                            href="https://www.instagram.com/tantasinss?igsh=YTVmb2tuMmZ3aG0w"
+                            target="_blank" rel style="background:#e1306c;">
+                            <span class="icon"><i
+                                    class="fab fa-instagram"></i></span>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- --------------------------------------------------- -->
+        </main>
+
+        <footer>
+            <div class="container">
+                © 2025 Panumas
+            </div>
+        </footer>
+        <script src="portfo.js"></script>
+    </body>
 </html>
